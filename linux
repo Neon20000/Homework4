@@ -1,0 +1,9 @@
+########## Retrieve secret value with EC2 Instance ##########
+
+#!/bin/bash
+
+# Install AWS Client
+sudo snap install aws-cli --classic
+
+# Retrieve secret value with EC2 Instance
+aws secretsmanager get-secret-value --secret-id my_test_secret
