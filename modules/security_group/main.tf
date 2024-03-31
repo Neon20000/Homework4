@@ -1,5 +1,5 @@
-resource "aws_security_group" "sg_ec2" {
-  name        = "sg_ec2"
+resource "aws_security_group" "this" {
+  name        = var.name
   description = "Security group for EC2"
 
   ingress {
@@ -29,7 +29,4 @@ resource "aws_security_group" "sg_ec2" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-}
-output "sg_id" {
-  value = aws_security_group.sg_ec2.id
 }

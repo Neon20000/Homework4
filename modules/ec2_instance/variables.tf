@@ -28,3 +28,15 @@ variable "instance_name" {
   type        = string
   default     = "module_instance"
 }
+
+variable "sg_name" {
+  description = "SG Name"
+  type        = string
+  default     = "sg_name"
+}
+
+variable "instance_number" {
+  description = "Instanse number"
+  type        = number
+  default     = 1
+}

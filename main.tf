@@ -12,10 +12,6 @@ provider "aws" {
   profile    = "admin"
 }
 
-module "security_group" {
-  source = "./modules/security_group"
-}
-
 module "ec2_instance" {
   source = "./modules/ec2_instance"
   
@@ -25,6 +21,12 @@ module "ec2_instance" {
   volume_type      = var.volume_type
   volume_size      = var.volume_size
   instance_name    = var.instance_name
-  
-  sg_id            = module.security_group.sg_id
 }
+
+module "security_group_1" {
+  source = "./modules/security_group"
+  name = "sg_2"
+}
+
+
+
