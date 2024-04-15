@@ -19,3 +19,9 @@ variable "instance_name" {
   type        = string
   default     = "module_instance"
 }
+variable "my_secret_name" {
+  description = "Secret Name"
+  type        = string
+  default     = "my_test_secret"
+}
+
